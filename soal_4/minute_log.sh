@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#* * * * * minute_log_sh
+#* * * * * minute_log.sh
 target_path=$(
 
 timestamp=$(date '+%Y%m%d%H%M%S')
