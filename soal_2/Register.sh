@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ##REGISTER SYSTEM##
 
 echo "=== Welcome to Registration System ==="
