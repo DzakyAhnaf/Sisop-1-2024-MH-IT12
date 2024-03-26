@@ -1,7 +1,6 @@
 #!/bin/sh
 
 #* * * * * minute_log.sh
-target_path=$(
 
 timestamp=$(date '+%Y%m%d%H%M%S')
 echo mem_total,mem_used,mem_free,mem_shared,mem_buff,mem_available,swap_total,swap_used,swap_free,path,path_size >> log/metrics_$timestamp.log
