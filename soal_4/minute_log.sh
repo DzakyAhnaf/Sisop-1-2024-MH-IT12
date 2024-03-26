@@ -8,7 +8,7 @@ echo mem_total,mem_used,mem_free,mem_shared,mem_buff,mem_available,swap_total,sw
 
 mem=$(free -m | grep Mem | awk '{print $2,",",$3,",",$4,",",$5,",",$6,",",$7}')
 swap=$(free -m | grep Swap | awk '{print $2,",",$3,",",$4}')
-dat3=$(du -sh ~ | awk '{print $2,",",$1}')
+path=$(du -sh ~ | awk '{print $2,",",$1}')
 
 echo $mem,$swap,$dat3 >> log/metrics_$timestamp.log
 
