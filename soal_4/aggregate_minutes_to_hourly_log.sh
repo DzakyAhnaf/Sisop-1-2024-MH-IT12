@@ -7,7 +7,7 @@ echo "type,mem_count,mem_used,mem_free,mem_shared,mem_buff,mem_available,swap_co
 
 #calculate max, min, and avg values
 awk -F ',' 'BEGIN {
-        for (i = 0; i <å 11; i++) {
+        for (i = 0; i <11; i++) {
             min[i] = 999999
             max[i] = 0
             avg[i] = 0
