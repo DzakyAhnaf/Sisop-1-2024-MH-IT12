@@ -180,7 +180,7 @@ j. Oppie ingin programnya tercatat dengan baik, maka buatlah agar program bisa m
     echo " "
 ```
 
--  Lanjut input untuk username, security question dan answer nya
+-  Lanjut input untuk username, security question dan answer nya dengan ``echo`` dan ``read``.
     ```bash
     echo "Enter your username!"
     read username
@@ -205,22 +205,22 @@ j. Oppie ingin programnya tercatat dengan baik, maka buatlah agar program bisa m
         exit 1
     fi
 
-    encrypted_password=$(echo "$password" | base64)
+    encrypted_password=$(echo "$password" | base64) 
     echo " "
     ```
-- Email, username, security question, security answer, dan password yang sudah diinput tadi disimpan dengan menggunakan fungsi. 
+- Email, username, security question, security answer, dan password yang sudah diinput tadi disimpan dengan menggunakan fungsi : 
   ```bash
     echo "$email,$username,$question,$answer,$encrypted_password,$role" >> users.txt
     echo "REGISTER SUCCESS!"
 
   
-- Setelah program register.sh sudah selesai, buat program login.sh. Dimulai dari menu login. Buat fungsi untuk input email dan password. 
+- Setelah program register.sh sudah selesai, buat program login.sh. Dimulai dari menu login. Buat fungsi untuk input email dan password.
   ```bash
   login() {
     echo "Enter your email"
     read email
     
-    if ! grep -q "^$email|" users.txt; then
+    if ! grep -q "^$email|" users.txt; then  #cek email di users.txt
         echo -e "Email not found. Please register first."
         return 1
   else  #apabila benar maka muncul untuk memasukkan password
@@ -228,7 +228,7 @@ j. Oppie ingin programnya tercatat dengan baik, maka buatlah agar program bisa m
     read -s password
 
   
-- Masuk ke fungsi password, menggunakan ``grep -q`` untuk mencari apakah password sesuai atau belum. Jika enkripsi password termasuk admin maka akan langsung diarahkan ke menu admin. Laporan berhasil login akan disimpan ke auth.log dengan detail hari, bulan, tahun, jam, menit, detik terjadinya.
+- Masuk ke fungsi password, menggunakan ``grep -q`` untuk mencari apakah password sesuai atau belum. Jika enkripsi password termasuk admin maka akan langsung diarahkan ke menu admin. Laporan berhasil login akan disimpan ke auth.log dengan detail hari, bulan, tahun, jam, menit, detik terjadinya. ``cut -d '|' -f 2)`` untuk meminta cut mengambil bagian kedua dari baris secara dilimiter.
   ```bash
   user_check=$(grep "^$email:" users.txt | cut -d '|' -f 2)
     encrypted_password=$(echo $password | base64)
@@ -240,7 +240,7 @@ j. Oppie ingin programnya tercatat dengan baik, maka buatlah agar program bisa m
   - Apabila tidak termasuk email tidak termasuk admin maka diarahkan ke menu member. Laporan berhasil login akan disimpan ke auth.log dengan detail hari, bulan, tahun, jam, menit, detik terjadinya.
   
   ```bash
-elif grep -q "^$user_check:.*:.*:.*:$encrypted_password" users.txt; then
+elif grep -q "^$user_check:.*:.*:.*:$encrypted_password" users.txt; then  #cek
     	echo -e "Login Successful"
         echo "$(date '+[%d%m%y %H:%M:%S]') [LOGIN SUCCESS] user [$user_check] logged in successfully" >> auth.log
     	member
@@ -268,7 +268,7 @@ elif grep -q "^$user_check:.*:.*:.*:$encrypted_password" users.txt; then
         return 1
   ```
 
-- Apabila email tercatat maka akan diproses menggunakan fungsi ``cut -d`` untuk memotong bagian dari setiap baris berdasarkan dilimiter dan fungsi ``-f 3`` untuk meminta cut mengambil bagian ketiga.
+- Apabila email tercatat maka akan diproses menggunakan fungsi ``cut -d`` untuk memotong bagian dari setiap baris berdasarkan dilimiter dan fungsi ``cut -d '|' -f 3`` untuk meminta cut mengambil bagian ketiga dari baris.
   ```bash
     else
     	security_question=$(grep "^$email:" users.txt | cut -d '|' -f 3)
@@ -283,7 +283,7 @@ elif grep -q "^$user_check:.*:.*:.*:$encrypted_password" users.txt; then
         echo "Answer Incorrect. Try again"
         return 1
   
-- Jika benar, maka akan mengecek enkripsi password dan akan memunculkan password dari email tersebut.
+- Jika benar, maka akan mengecek enkripsi password dan akan memunculkan password dari email tersebut. ``cut -d '|' -f 5`` untuk meminta cut mengambil bagian kelima dari baris secara dilimiter.
   ```bash
   else
     	encrypted_password=$(grep "^$email:" users.txt | cut -d '|' -f 5)
@@ -332,14 +332,14 @@ elif grep -q "^$user_check:.*:.*:.*:$encrypted_password" users.txt; then
         return
     fi
     
-    	if [[$email != "*@*.*"]]; then
+    	if [[$email != "*@*.*"]]; then  #apabila tidak cocok dengan polanya
     	echo -e "Email not valid"
     	echo "$(date '+[%d%m%y %H:%M:%S]') [LOGIN FAILED] ERROR Failed login attempt on user with email [$email] >> auth.log
     	echo " "
    	return
    fi
   
-- Masukkan username baru, pertanyaan keamanan dan jawabannya, serta password.
+- Masukkan username baru, pertanyaan keamanan dan jawabannya, serta password dengan ``echo`` dan ``read``.
   ```bash
   echo "Enter new username"
     read new_username
@@ -397,7 +397,7 @@ elif grep -q "^$user_check:.*:.*:.*:$encrypted_password" users.txt; then
 
     newencrypted_password=$(echo $edit_password | base64)
   
-- Simpan hasil edit user kedalam fungsi dibawah ini
+- Simpan hasil edit user kedalam fungsi ``sed -i``.
   ```bash
   sed -i "/^$edit_email:/c\\$edit_email|$edit_username|$edit_question|$edit_answer|$encrypted_password" users.txt
     echo -e "USER EDIT UPDATED"
