@@ -501,15 +501,20 @@ elif grep -q "^$user_check:.*:.*:.*:$encrypted_password" users.txt; then
 
 ### Hasil Output
 
-![alt text](image-2.png)
+![image](https://github.com/DzakyAhnaf/Sisop-1-2024-MH-IT12/assets/110287409/0c6f63cc-6fee-4034-9951-ef5bac08c063)
 
-![alt text](image-6.png)
 
-![alt text](image-3.png)
+![image](https://github.com/DzakyAhnaf/Sisop-1-2024-MH-IT12/assets/110287409/78542586-416a-4ed5-8b57-a0208df7e2de)
 
-![alt text](image-4.png)
 
-![alt text](image-5.png)
+![image](https://github.com/DzakyAhnaf/Sisop-1-2024-MH-IT12/assets/110287409/b70fb348-f1e4-4ec1-b580-e9176998142f)
+
+
+![image](https://github.com/DzakyAhnaf/Sisop-1-2024-MH-IT12/assets/110287409/40713b0e-c4d5-4ec7-938f-8731f7039ed0)
+
+
+![image](https://github.com/DzakyAhnaf/Sisop-1-2024-MH-IT12/assets/110287409/793d57bf-4713-42d6-9694-42a4da6e55bb)
+
 
 ## Soal 3
 
