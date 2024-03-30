@@ -110,7 +110,8 @@ Lalu, `{print "Ditemukan purchase date", $2,"dengan Quantity", $18, "atas nama A
 dari kolom ke-2 (Purchase date) dan kolom ke-18 (Quantity) untuk setiap baris yang mengandung “Adriaens”.
 ### Output
 ---
-![alt text](<Screenshot from 2024-03-30 21-21-52.png>)
+![Screenshot from 2024-03-30 21-21-52](https://github.com/DzakyAhnaf/Sisop-1-2024-MH-IT12/assets/110287409/80ed1c76-a6d4-457b-a3e7-38fe7033e33f)
+
 ## Soal 2
 
 ---
@@ -643,13 +644,16 @@ done
 ### Hasil Output
 Hasil ```Tree``` dari Program ```awal.sh```
 
-![alt text](<Screenshot from 2024-03-30 19-04-15.png>)
+![Screenshot from 2024-03-30 19-04-15](https://github.com/DzakyAhnaf/Sisop-1-2024-MH-IT12/assets/110287409/60079acc-311d-425f-bdf8-bb107d89a0bf)
+
 
 Hasil program ```awal.sh```
 
-![alt text](<Screenshot from 2024-03-30 19-02-47.png>)
+![Screenshot from 2024-03-30 19-02-39](https://github.com/DzakyAhnaf/Sisop-1-2024-MH-IT12/assets/110287409/5b859b10-0d26-457f-bf73-441b83a8eea4)
 
-![alt text](<Screenshot from 2024-03-30 19-02-39.png>)
+
+![Screenshot from 2024-03-30 19-02-47](https://github.com/DzakyAhnaf/Sisop-1-2024-MH-IT12/assets/110287409/723fe057-8d44-416c-92c2-68bc51932732)
+
 
 ### search.sh
 
@@ -672,12 +676,14 @@ Hasil program ```awal.sh```
 ### Hasil Output
 Hasil program ```search.sh```
 
-![alt text](<Screenshot from 2024-03-30 18-55-28.png>)
+![Screenshot from 2024-03-30 18-55-10](https://github.com/DzakyAhnaf/Sisop-1-2024-MH-IT12/assets/110287409/62d9cde3-9beb-4daa-8c86-c7b69fa0c064)
+
 
 ### Kendala
 Masih belum menemukan secret picture dari hasil dekripsi setiap file.txt  yang dimaksud pada soal alias ```NOT FOUND```
 
-![alt text](<Screenshot from 2024-03-30 18-55-10.png>)
+![Screenshot from 2024-03-30 18-55-10](https://github.com/DzakyAhnaf/Sisop-1-2024-MH-IT12/assets/110287409/ec0d585b-3048-475d-85a1-ed4ba25bc69e)
+
 
 ## Soal 4
 
@@ -748,7 +754,8 @@ chmod 600 /home/tarisa/log/metrics_$timestamp.log
 
 ### Output dari file script minute_log.sh
 
-![alt text](image.png)
+![image](https://github.com/DzakyAhnaf/Sisop-1-2024-MH-IT12/assets/110287409/b59fc581-66cb-440e-a4bf-b54c955505f2)
+
 
 ---
 
@@ -950,7 +957,8 @@ chmod 600 log/metrics_agg_$timestamp.log
 
 ### Output dari file script aggregate_minutes_to_hourly_log.sh
 
-![alt text](image-1.png)
+![image](https://github.com/DzakyAhnaf/Sisop-1-2024-MH-IT12/assets/110287409/550edc8d-341e-49bf-92b2-9227c981ea15)
+
 
 ---
 
